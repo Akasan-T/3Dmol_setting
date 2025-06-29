@@ -8,12 +8,13 @@
 
 <pre><code>
 3Dmol_setting/
+├── docker-compose.yml
 ├── index.html              ← 一覧ページ（カードやリスト形式）
 ├── molecule.html           ← 詳細ページ（URLで?ID=を受け取る）
 ├── data/
 │   └── molecules.json      ← 各分子の情報（ID・名前・説明・cifファイル・タイプ）
 ├── cif/                    ← `.cif`ファイル格納場所
-│   ├── nacl.cif
+│   ├── .cif
 │   ├── diamond.cif
 │   └── quartz.cif
 ├── js/

@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const moleculeId = urlParams.get("id");
 
-fetch("data/molecules.json")
+fetch("/data/molecules.json")
   .then(res => res.json())
   .then(molecules => {
     const mol = molecules.find(m => m.id === moleculeId);
@@ -12,13 +12,24 @@ fetch("data/molecules.json")
     document.getElementById("mol-desc").textContent = mol.description;
 
     // 3Dmolで表示
+    console.log("ファイル読み込み開始:", mol.file, mol.type);
     fetch(mol.file)
-      .then(res => res.text())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(`ファイルが読み込めませんでした: ${mol.file} (${res.status})`);
+        }
+        return res.text();
+      })
       .then(cifData => {
+        console.log("cifファイル内容:", cifData.slice(0, 100)); // デバッグ
         const viewer = $3Dmol.createViewer("viewer", { backgroundColor: "white" });
-        viewer.addModel(cifData, mol.type); // ← typeは"cif"
-        viewer.setStyle({}, {stick: {}});
+        viewer.addModel(cifData, mol.type); // ← ここで失敗することがある
+        viewer.setStyle({}, { stick: {} });
         viewer.zoomTo();
         viewer.render();
+      })
+      .catch(err => {
+        console.error("表示エラー:", err);
+        alert("分子ファイルの読み込みに失敗しました");
       });
   });
