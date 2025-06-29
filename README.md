@@ -6,8 +6,8 @@
 
 ### ファイル構成
 
-<pre><code>```
-molecule-zukan/
+<pre><code>
+3Dmol_setting/
 ├── index.html              ← 一覧ページ（カードやリスト形式）
 ├── molecule.html           ← 詳細ページ（URLで?ID=を受け取る）
 ├── data/
@@ -23,5 +23,5 @@ molecule-zukan/
 │   └── style.css           ← 全体のデザインCSS
 └── assets/
     └── logo.png            ← ロゴや画像（任意）
-```
+
 </code></pre>
