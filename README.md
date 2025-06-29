@@ -5,7 +5,10 @@
 - 制作する時はcloneして使ってくれ!!
 
 ### ファイル構成
-3Dmol_setting/
+
+、、、
+
+3Dmol_setting/　
 ├── index.html              ← 一覧ページ（カードやリスト形式）
 ├── molecule.html           ← 詳細ページ（URLで?ID=を受け取る）
 ├── data/
@@ -21,3 +24,5 @@
 │   └── style.css           ← 全体のデザインCSS
 └── assets/
     └── logo.png            ← ロゴや画像
+
+、、、
