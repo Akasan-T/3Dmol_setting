@@ -33,7 +33,7 @@ JavaScript <br>
 <pre><code>
 
 3Dmol_setting/
-├── docker-compose.yml
+├── docker-compose.yml　　　 ← docker設定
 ├── index.html              ← 一覧ページ（カードやリスト形式）
 ├── molecule.html           ← 詳細ページ（URLで?ID=を受け取る）
 ├── data/
