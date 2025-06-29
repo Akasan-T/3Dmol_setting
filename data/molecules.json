@@ -3,7 +3,7 @@
     "id": "diamond",
     "name": "ダイヤモンド",
     "description": "炭素が正四面体構造で結晶化している。",
-    "file": "cif/diamond.cif",
+    "file": "cif/Cryolite.cif",
     "type": "cif"
   }
 ]
