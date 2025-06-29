@@ -28,7 +28,7 @@ JavaScript <br>
 
 ③ [リンクへ飛ぶ](http://localhost:8080/)
 
-### ファイル構成
+### ディレクトリ構成
 
 <pre><code>
 
