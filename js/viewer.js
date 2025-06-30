@@ -21,9 +21,10 @@ fetch("/data/molecules.json")
         return res.text();
       })
       .then(cifData => {
-        console.log("cifファイル内容:", cifData.slice(0, 100)); // デバッグ
+        console.log("type:", mol.type); // ← デバッグ用
         const viewer = $3Dmol.createViewer("viewer", { backgroundColor: "white" });
-        viewer.addModel(cifData, mol.type); // ← ここで失敗することがある
+        const format = mol.type || "cif"; // ← 安全対策
+        viewer.addModel(cifData, format);
         viewer.setStyle({}, { stick: {} });
         viewer.zoomTo();
         viewer.render();
