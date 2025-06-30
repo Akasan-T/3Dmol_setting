@@ -5,12 +5,16 @@
 - 制作する時はcloneして使ってくれ!!
 
 - ちなみに3Dmolは結晶構造の1ユニットセル（単位格子）だけが描画されるらしいからマジで表記してもつまらん
+<<<<<<< HEAD
 - 今GitHubに入っているcifファイルじゃ動かない
 
 #### ブランチ内容
 - **main**:完成したものを追加する
 - **div**:作業用ブランチ
 - **その他test-branch**:その他テストで使用するブランチ
+=======
+- 今GitHubに入っているcifファイルじゃ動かない　04369a.cifファイルは動きます。
+>>>>>>> origin/main
 --------
 
 ### 使用言語 (今のところ)
@@ -33,12 +37,12 @@ JavaScript <br>
 
 ③ [リンクへ飛ぶ](http://localhost:8080/)
 
-### ファイル構成
+### ディレクトリ構成
 
 <pre><code>
 
 3Dmol_setting/
-├── docker-compose.yml
+├── docker-compose.yml　　　 ← docker設定
 ├── index.html              ← 一覧ページ（カードやリスト形式）
 ├── molecule.html           ← 詳細ページ（URLで?ID=を受け取る）
 ├── data/
