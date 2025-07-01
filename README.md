@@ -38,24 +38,31 @@ JavaScript <br>
 
 ### ディレクトリ構成
 
-<pre><code>
+<pre><code>```plaintext
+3Dmol-setting/
+├── docker-compose.yml         ← Docker構成ファイル（PHP + MySQL）
+├── php/
+│   ├── Dockerfile             ← PHP用のDockerイメージビルド設定
+│   ├── index.html             ← 一覧ページ（カードやリスト形式）
+│   ├── molecule.html          ← 詳細ページ（?id=で取得）
+│   ├── js/
+│   │   ├── main.js            ← 一覧取得・クリック処理
+│   │   └── viewer.js          ← 3Dmol.jsでcif表示
+│   ├── css/
+│   │   └── style.css          ← デザイン用CSS
+│   ├── cif/
+│   │   ├── nacl.cif
+│   │   ├── diamond.cif
+│   │   └── quartz.cif
+│   ├── assets/
+│   │   └── logo.png
+│   └── api/
+│       ├── db.php             ← DB接続設定
+│       ├── get_molecules.php  ← 分子一覧取得API
+│       └── get_molecule.php   ← 単一分子詳細取得API
+├── db/
+│   └── init.sql               ← MySQL用 初期テーブル＆データ挿入SQL
+└── README.md                  ← プロジェクト説明（任意）
+```
+</code>```</pre>
 
-3Dmol_setting/
-├── docker-compose.yml　　　 ← docker設定
-├── index.html              ← 一覧ページ（カードやリスト形式）
-├── molecule.html           ← 詳細ページ（URLで?ID=を受け取る）
-├── data/
-│   └── molecules.json      ← 各分子の情報（ID・名前・説明・cifファイル・タイプ）
-├── cif/                    ← `.cif`ファイル格納場所
-│   ├── .cif
-│   ├── diamond.cif         ← 仮ファイル
-│   └── quartz.cif          ← 仮ファイル
-├── js/
-│   ├── main.js             ← 一覧表示・クリック処理など
-│   └── viewer.js           ← 3Dmolでcifを読み込む処理
-├── css/
-│   └── style.css           ← 全体のデザインCSS
-└── assets/
-    └── logo.png            ← ロゴや画像（任意）
-
-</code></pre>
