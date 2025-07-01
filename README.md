@@ -38,7 +38,7 @@ JavaScript <br>
 
 ### ディレクトリ構成
 
-<pre><code>```plaintext
+<pre><code>
 3Dmol-setting/
 ├── docker-compose.yml         ← Docker構成ファイル（PHP + MySQL）
 ├── php/
@@ -63,6 +63,5 @@ JavaScript <br>
 ├── db/
 │   └── init.sql               ← MySQL用 初期テーブル＆データ挿入SQL
 └── README.md                  ← プロジェクト説明（任意）
-```
-</code>```</pre>
+</code></pre>
 
