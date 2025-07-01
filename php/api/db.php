@@ -10,5 +10,5 @@ if ($mysqli->connect_errno) {
     echo json_encode(["error" => "DB接続失敗: " . $mysqli->connect_error]);
     exit();
 }
-$mysqli->set_charset("utf8");
+$mysqli->set_charset("utf8mb4");
 ?>

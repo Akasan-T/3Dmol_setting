@@ -1,4 +1,9 @@
-FROM php:7.4-apache
+FROM php:8.2-apache
 
-RUN docker-php-ext-install mysqli
-COPY . /var/www/html/
+# MySQL ドライバのインストール
+RUN docker-php-ext-install pdo_mysql
+
+COPY ./api /var/www/html/api
+COPY ./js /var/www/html/js
+COPY ./index.html /var/www/html/
+COPY ./molecule.html /var/www/html/
