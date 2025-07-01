@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 include 'db.php';
 
-$sql = "SELECT id, name, tupe FROM molecules ORDER BY id";
+$sql = "SELECT id, name, scientific_name, type FROM molecules";
 $result = $mysqli->query($sql);
 
 $molecules = [];
