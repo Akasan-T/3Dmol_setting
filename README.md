@@ -2,10 +2,10 @@
 
 #### ブランチ内容
 
-    - **main** : 完成したものを追加する
-    - **div** : 作業用ブランチ
-    - **DB_test_brunch** : データベース設定ブランチ
-    - **その他test-branch** : その他テストで使用するブランチ
+    - main : 完成したものを追加する
+    - div : 作業用ブランチ
+    - DB_test_brunch : データベース設定ブランチ
+    - その他test-branch : その他テストで使用するブランチ
 
 
 --------
@@ -40,12 +40,12 @@ MYSQL <br>
 
 ### idの構成
 
-    - **name** : 日本語名(例：ダイヤモンド)
-    - **scientific_name** : 学名(例：Diamond)Add commentMore actions
-    - **gemstone_meaning** : 石言葉(例：永遠の絆)
-    - **description** : 詳細説明(構造・特徴など)
-    - **cif_filename** : cifファイル名
-    - **type** : カテゴリー
+    - name : 日本語名(例：ダイヤモンド)
+    - scientific_name : 学名(例：Diamond)Add commentMore actions
+    - gemstone_meaning : 石言葉(例：永遠の絆)
+    - description : 詳細説明(構造・特徴など)
+    - cif_filename : cifファイル名
+    - type : カテゴリー
 
 
 ### ディレクトリ構成
